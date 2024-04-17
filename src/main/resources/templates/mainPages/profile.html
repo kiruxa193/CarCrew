@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Личный кабинет</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<header class="bg-dark">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#" th:href="@{/mainPages/main}">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" th:href="@{/mainPages/event}">Ивенты</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" >Обслуживание</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" th:href="@{/mainPages/shop}">Разборка</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" th:href="@{/mainPages/discussions}">Обсуждения</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" th:href="@{/auth/registr}">Вход/Регистрация</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h2>Мой профиль</h2>
+      <hr>
+      <form th:action="@{/logout}" th:method="POST">
+        <div class="form-group">
+          <p for="name">Имя:<span th:text="${username}"></span></p>
+
+        </div>
+        <div class="form-group">
+          <p for="email">Email:<span th:text="${email}"></span></p>
+
+        </div>
+        <input type="submit" value="Logout" />
+      </form>
+    </div>
+  </div>
+</main>
+
+<footer class="bg-dark text-light mt-5 py-3">
+  <div class="container">
+    <p class="text-center">&copy; 2021 Личный кабинет</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" type="text/css" href="/css/auth.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <main>
+        <div class="form-wrapper">
+            <form class="form" th:method="POST" th:action="@{/auth/registr}" th:object="${user}">
+                <h1 class="text">Регистрация</h1>
+                <p class="login"><span class="span-text">Введите имя:</span>
+                    <input type="text" th:field="*{username}" name = "username" id = "username">
+                <div style="color:red" th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Username Error</div>
+
+                </p>
+                <p class="login"><span class="span-text">Введите ник:</span>
+                    <input type="text" th:field="*{nickname}">
+                <div style="color:red" th:if="${#fields.hasErrors('nickname')}" th:errors="*{nickname}">Name Error</div>
+                </p>
+                <p class="pass"><span class="span-text">Введите логин (почта):</span>
+                    <input type="text" th:field="*{email}">
+                    <div style="color:red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Name Error</div>
+                </p>
+                <p class="pass"><span class="span-text">Придумайте пароль:</span>
+                    <input type="text" th:field="*{password}" />
+                <div style="color:red" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Name Error</div>
+                </p>
+                <button type="submit" class="submit" is="submit">
+                  Отправить
+                </button>
+                <p class="an">
+                    Уже зарегистрированы? Можете войти здесь.
+                </p>
+            </form>
+        </div>
+    </main>
+</body>

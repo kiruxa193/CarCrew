@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Page</title>
+    <!-- Подключение стилей Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<!-- Header -->
+<header class="bg-dark">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#" th:href="@{/mainPages/main}">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" th:href="@{/mainPages/event}">Ивенты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Обслуживание</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" th:href="@{/mainPages/shop}">Разборка</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" th:href="@{/mainPages/discussions}">Обсуждения</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" th:href="@{/auth/registr}">Вход/Регистрация</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- Main Content -->
+<main class="container my-5">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <form id="add-article-form" class="needs-validation" novalidate>
+                <div class="form-group">
+                    <label for="topic">Публикация заметки:</label>
+                    <input type="text" class="form-control" id="topic" required>
+                    <div class="invalid-feedback">
+                        Пожалуйста, введите тему статьи.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="content">Текст:</label>
+                    <textarea class="form-control" id="content" rows="10" required></textarea>
+                    <div class="invalid-feedback">
+                        Пожалуйста, введите содержимое статьи.
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Опубликовать</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-dark text-light mt-5 py-3">
+    <div class="container">
+        <p class="text-center">&copy; 2021 Bootstrap Page</p>
+    </div>
+</footer>
+
+<!-- Подключение скриптов Bootstrap и AJAX -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Обработка формы добавления статьи
+        $('#add-article-form').submit(function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            var form = $(this);
+            if (form[0].checkValidity() === false) {
+                form.addClass('was-validated');
+                return;
+            }
+
+            var topic = $('#topic').val();
+            var content = $('#content').val();
+
+            $.ajax({
+                type: 'POST',
+                url: '/mainPages/addArticle',
+                data: {
+                    topic: topic,
+                    content: content
+                },
+                success: function(response) {
+                    // Обновление содержимого страницы
+                    $('#topic').val('');
+                    $('#content').val('');
+                    form.removeClass('was-validated');
+                    // TODO: обновление списка статей
+                },
+                error: function() {
+                    alert('Произошла ошибка при добавлении статьи.');
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

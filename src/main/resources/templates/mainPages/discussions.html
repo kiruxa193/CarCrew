@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Page</title>
+    <!-- подключение стилей bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<!-- шапка -->
+<header class="bg-dark">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#" th:href="@{/mainPages/main}">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" th:href="@{/mainPages/event}">Ивенты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" >Обслуживание</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" th:href="@{/mainPages/shop}">Разборка</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" th:href="@{/mainPages/discussions}">Обсуждения</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" th:href="@{/auth/registr}">Вход/Регистрация</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- основное содержимое -->
+<main class="container mt-5">
+    <a href="#" th:href="@{/mainPages/addArticle}" class="btn btn-primary btn-sm float-right mb-2">Добавить статью</a>
+    <div class="row">
+        <div class="col-md-6 border" th:each="article : ${articles}">
+            <h2  th:text="${article.topic}"></h2>
+            <p th:text="${article.content}"></p>
+            <p><em>Автор: </em><span th:text="${article.getOwner()}"></span></p>
+        </div>
+
+    </div>
+    <!--   <div class="row mt-5">
+         <div class="col-md-6" th:each="article : ${articles}">
+               <h2 th:text="${article.topic}"></h2>
+               <p th:text="${article.content}"></p>
+               <p><em>Автор: </em><span th:text="${article.getOwner()}"></span></p>
+           </div>
+        <a href="#" class="btn btn-primary btn-sm float-right mb-2">Добавить статью</a>
+       </div>-->
+</main>
+
+<!-- футер -->
+<footer class="bg-dark text-light py-3">
+    <div class="container text-center">
+        &copy; 2021 Bootstrap Page
+    </div>
+</footer>
+
+<!-- подключение скриптов bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>СarCrew</title>
+    <link rel="stylesheet" type="text/css" href="/css/style_event.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/script_event.js"></script>
+</head>
+<body>
+    <header>
+            <video autoplay muted loop id="bg-street"><source src="/videos/street.mp4" type="video/mp4"> </video>
+            <video autoplay muted loop id="bg-rally"><source src="/videos/rally.mp4" type="video/mp4"></video>
+            <video autoplay muted loop id="bg-rds"><source src="/videos/rds.mp4" type="video/mp4"></video>
+
+        <ul class="main-nav">
+            <li class="main-nav__item"><a class="null" th:href="@{/mainPages/main}">Главная</a></li>
+            <li class="main-nav__item"><a class="null" th:href="@{/mainPages/event}">Ивенты</a></li>
+            <li class="main-nav__item"><a class="null" href="*">Обслуживание</a></li>
+            <li class="main-nav__auth"><a class="null" th:href="@{/mainPages/shop}">Разборка</a></li>
+            <li class="main-nav__auth"><a class="null" th:href="@{/mainPages/discussions}">Обсуждения</a></li>
+            <li class="main-nav__auth"><a class="null" th:href="@{/auth/registr}">Вход/Регистрация</a></li>
+        </ul>
+
+        <div id="my-element" class="hide-on-scroll">Здесь вы узнаете какие ивенты пройдут в ближайшее время, а также сможете
+            купить билеты и узнать дату и место проведения.</div>
+
+        <div class="wrapper">
+            <div class="tile">
+                <h2>Russian Drift Series 2023</h2>
+                <img src="/images/rds_raspisanie.jpg">
+                <p>2023 год — семь гоночных уикендов, которые пройдут по всей России с 29 апреля по 15 октября.
+                    Мы не изменяем традициям – сезон дрифта в России откроем на автодроме Moscow Raceway,
+                    который примет в 2023 году два этапа серии — первый и шестой.</p>
+
+            </div>
+
+            <div class="tile2">
+                <h2>Sochi Drift Challenge 2022-2023</h2>
+                <img src="/images/sdch.jpg">
+                <p>Главная идея соревнования Sochi Drift Challenge – дать шанс талантливым пилотам проявить себя и повысить свой уровень,
+                    занимаясь дрифтом не на улицах или парковках городов, а профессионально и безопасно на российской трассе Формулы 1.
+                    25-26 МАРТА ФИНАЛ SOCHI AUTODROM, второй поворот по традиции со зрителями на трибуне Т2!</p>
+            </div>
+
+            <div class="tile3">
+                <h2>РСГК 2023</h2>
+                <img src="/images/rsgk.jpg">
+                <p>В новом сезоне СМП РСКГ, который в десятый раз пройдет под эгидой программы развития российского автоспорта SMP Racing,
+                    поклонников автоспорта ждет еще больше гонок.</p>
+            </div>
+
+            <div class="tile4">
+                <h2>Russian Drift Series 2023</h2>
+                <img src="/images/rds_raspisanie.jpg">
+                <p>2023 год — семь гоночных уикендов, которые пройдут по всей России с 29 апреля по 15 октября.
+                    Мы не изменяем традициям – сезон дрифта в России откроем на автодроме Moscow Raceway,
+                    который примет в 2023 году два этапа серии — первый и шестой.</p>
+            </div>
+
+            <div class="tile5">
+                <h2>Sochi Drift Challenge 2022-2023</h2>
+                <img src="/images/sdch.jpg">
+                <p>Главная идея соревнования Sochi Drift Challenge – дать шанс талантливым пилотам проявить себя и повысить свой уровень,
+                    занимаясь дрифтом не на улицах или парковках городов, а профессионально и безопасно на российской трассе Формулы 1.
+                    25-26 МАРТА ФИНАЛ SOCHI AUTODROM, второй поворот по традиции со зрителями на трибуне Т2!</p>
+            </div>
+
+            <div class="tile6">
+                <h2>РСГК 2023</h2>
+                <img src="/images/rsgk.jpg">
+                <p>В новом сезоне СМП РСКГ, который в десятый раз пройдет под эгидой программы развития российского автоспорта SMP Racing,
+                    поклонников автоспорта ждет еще больше гонок.</p>
+            </div>
+        </div>
+
+    </header>
+
+
+</body>
+</html>

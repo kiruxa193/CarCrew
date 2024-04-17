@@ -1,0 +1,330 @@
+body{
+    color: #e0e0e0;
+    background: rgb(0, 0, 0);
+    font-family: 'Roboto', sans-serif;
+}
+div {
+    display: flex;
+    top: 90px;
+    left: 246px;
+}
+
+.null{
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* Стиль для кнопки при наведении */
+li:hover {
+    background-color: rgba(23, 22, 22, 0.4) ;
+    cursor: pointer;
+    border-radius: 10px;
+
+
+}
+
+/* Стиль для кнопки в фокусе */
+li:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(23, 22, 22);
+}
+
+.invete {
+    border: 4px solid #f1f1f1;
+    border-radius: 16px;
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 25px;
+    padding: 8px 2px;
+    text-align: center;
+}
+
+.main-nav{
+    background: rgba(71, 69, 69, 0.62);
+    display: flex;
+    justify-content: space-between;
+    max-width: 709px;
+    text-align: center;
+    padding: 10px 30px;
+    border: 4px solid #d4d4d4;
+    border-radius: 10px;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+    top: 40px;
+    margin: 0 auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+li{
+    font-family: Roboto;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+    vertical-align: middle;
+    text-align: center;
+    list-style-type: none;
+    padding: 10px;
+
+}
+
+#bg-street::after{
+    content: "";
+    border: 4px solid #f1f1f1;
+    width: 844.400px;
+    height: 1389.720px;
+}
+
+
+#bg-street {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+    border-bottom-left-radius: 16px;
+
+
+
+}
+#bg-rally {
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    top: 50%;
+
+
+}
+#bg-rds {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+
+
+
+}
+/* Добавляем оверлей с прозрачностью, чтобы сделать текст на сайте более читаемым */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.wrapper{
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 800px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+
+}
+
+.tile {
+    border:4px solid #d4d4d4;
+    background: rgba(71, 69, 69, 0.62);
+    border-radius: 10px;
+    width: 32%;
+    display: block;
+
+}
+
+.tile h2 {
+    font-size: 25px;
+    display: block;
+    left: 90px;
+    right: 100px;
+    text-align: center;
+}
+
+.tile p {
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 10px;
+
+
+}
+.tile img {
+    width: 100%;
+    top: 80px;
+}
+
+
+.tile2 {
+    border:4px solid #d4d4d4;
+    background: rgba(71, 69, 69, 0.62);
+    border-radius: 10px;
+    width: 32%;
+    display: block;
+
+}
+
+.tile2 h2 {
+    font-size: 25px;
+    display: block;
+    left: 90px;
+    right: 100px;
+    text-align: center;
+}
+
+.tile2 p {
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 10px;
+}
+.tile2 img {
+    width: 100%;
+    top: 80px;
+}
+
+.tile3 {
+    border:4px solid #d4d4d4;
+    background: rgba(71, 69, 69, 0.62);
+    border-radius: 10px;
+    display: block;
+    width: 32%;
+
+
+}
+
+.tile3 h2 {
+    font-size: 25px;
+    display: block;
+    left: 90px;
+    right: 100px;
+    text-align: center;
+}
+
+.tile3 p {
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 10px;
+}
+.tile3 img {
+    width: 100%;
+    top: 80px;
+}
+
+.tile4 {
+    border:4px solid #d4d4d4;
+    background: rgba(71, 69, 69, 0.62);
+    border-radius: 10px;
+    width: 32%;
+    display: block;
+    margin-top: 20px;
+
+}
+
+.tile4 h2 {
+    font-size: 25px;
+    display: block;
+    left: 90px;
+    right: 100px;
+    text-align: center;
+}
+
+.tile4 p {
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 10px;
+
+
+}
+.tile4 img {
+    width: 100%;
+    top: 80px;
+}
+
+
+.tile5 {
+    border:4px solid #d4d4d4;
+    background: rgba(71, 69, 69, 0.62);
+    border-radius: 10px;
+    width: 32%;
+    display: block;
+    margin-top: 20px;
+
+}
+
+.tile5 h2 {
+    font-size: 25px;
+    display: block;
+    left: 90px;
+    right: 100px;
+    text-align: center;
+}
+
+.tile5 p {
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 10px;
+}
+.tile5 img {
+    width: 100%;
+    top: 80px;
+}
+
+.tile6 {
+    border:4px solid #d4d4d4;
+    background: rgba(71, 69, 69, 0.62);
+    border-radius: 10px;
+    display: block;
+    width: 32%;
+    margin-top: 20px;
+
+
+}
+
+.tile6 h2 {
+    font-size: 25px;
+    display: block;
+    left: 90px;
+    right: 100px;
+    text-align: center;
+}
+
+.tile6 p {
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 10px;
+}
+.tile6 img {
+    width: 100%;
+    top: 80px;
+}
+
+
+.hide-on-scroll {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+
+
+}
+
+.hide-on-scroll.hidden {
+    opacity: 0;
+}

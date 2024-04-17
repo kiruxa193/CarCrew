@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СarCrew</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <!--
+        <ul class="main-nav">
+            <li class="v">
+                <img src="/source/img/IMAGE.png" alt="">
+            </li>
+            <li class="main-nav__item">
+                Кнопка
+            </li>
+            <li class="main-nav__item">
+                кнопка
+            </li>
+            <li class="main-nav__item">
+                кнопка
+            </li>
+            <li class="main-nav__auth">
+                вход
+            </li>
+        </ul>-->
+        <ul class="main-nav">
+            <li class="main-nav__item"><a class="null" th:href="@{/mainPages/main}">Главная</a></li>
+            <li class="main-nav__item"><a class="null" th:href="@{/mainPages/event}">Ивенты</a></li>
+            <li class="main-nav__item"><a  class="null" href="*">Обслуживание</a></li>
+            <li class="main-nav__auth"><a class="null" th:href="@{/mainPages/shop}">Разборка</a></li>
+            <li class="main-nav__auth"><a class="null" th:href="@{/mainPages/discussions}">Обсуждения</a></li>
+            <li class="main-nav__auth"><a class="null" th:href="@{/auth/registr}">Вход/Регистрация</a></li>
+        </ul>
+    </header>
+    <main class="wrapper down">
+        <article class="hallo-word ">
+            <h1 class="hello-text ">
+               Надоело встречть на авито рядом с турбиной зимнюю куртку?
+            </h1>
+            <h2 class="second-text">
+                у нас есть своя биржа и мы понимаем в чем отличае крыла от фары
+            </h2>
+
+            </section>
+        </article>
+        <article class="sections">
+            <h2 class="our">
+                возможности нашего сервиса
+            </h2>
+            <div class="grid">
+                <div class="first grid-default">
+                 <h3>ФОРУМ </h3>   
+                </div>
+                <div class="second grid-default">
+                    <h3>МЕРОПРИЯТИЯ </h3>
+                </div>
+                <div class="three grid-default">
+                    <h3>СЕРВИС И ОБСЛУЖИВАНИЕ </h3>
+                </div>
+                <div class="four grid-default">
+                   
+                    <h3>РЫНОК </h3>
+                </div>
+            </div>
+        </article>
+        
+        
+    </main>
+
+</body>
+
+</html>

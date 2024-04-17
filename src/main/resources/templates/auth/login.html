@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>СarCrew</title>
+    <link href="/css/auth.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<main>
+    <div class="form-wrapper">
+        <form class="form" method="post" action="/process_login">
+            <h1 class="text">Вход</h1>
+            <p class="login"><span class="span-text">Введите ваш логин:</span>
+                <label for="username"></label><input type="text" name="username" id="username"/>
+            </p>
+            <p class="pass"><span class="span-text">Введите ваш пароль:</span>
+                <label for="password"></label><input type="password" name="password" id="password"/>
+            </p>
+            <input type="submit" class="submit">
+
+            </input>
+            <div th:if="${param.error}" style="color: red">
+                wrong input
+            </div>
+            <p class="an">
+                Еще не зарегистрированы, можете сделать это по этой ссылке
+            </p>
+        </form>
+    </div>
+</main>
+</body>
